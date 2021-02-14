@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:xipel/pages/love_generator_page.dart';
+import 'package:xipel/core/utilities/analytics.dart';
+import 'package:xipel/features/pages/love_generator_page.dart';
 
-void main() {
+Future<void> main() async {
+  await Analytics.analytics.logAppOpen();
   runApp(MyApp());
 }
 

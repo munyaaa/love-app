@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xipel/blocs/bloc/pixelate_bloc.dart';
-import 'package:xipel/widgets/love_pixelate.dart';
+import 'package:xipel/features/blocs/pixelate_bloc/pixelate_bloc.dart';
+import 'package:xipel/features/widgets/love_pixelate.dart';
 
 class LoveGenerator extends StatefulWidget {
   final List<List<int>> lovePixelate;

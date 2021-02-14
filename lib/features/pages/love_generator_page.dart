@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:xipel/blocs/bloc/pixelate_bloc.dart';
-import 'package:xipel/widgets/love_button.dart';
-import 'package:xipel/widgets/love_generator.dart';
-import 'package:xipel/widgets/love_title.dart';
+import 'package:xipel/core/utilities/analytics.dart';
+import 'package:xipel/features/blocs/pixelate_bloc/pixelate_bloc.dart';
+import 'package:xipel/features/widgets/love_button.dart';
+import 'package:xipel/features/widgets/love_generator.dart';
+import 'package:xipel/features/widgets/love_title.dart';
 
 class LoveGeneratorPage extends StatefulWidget {
   static bool isSmallScreen(BuildContext context) {
@@ -24,6 +25,15 @@ class LoveGeneratorPage extends StatefulWidget {
 }
 
 class _LoveGeneratorPageState extends State<LoveGeneratorPage> {
+  @override
+  void initState() {
+    super.initState();
+    Analytics.analytics.setCurrentScreen(
+      screenName: "love_generator_page",
+      screenClassOverride: "LoveGeneratorPage",
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider<PixelateBloc>(
@@ -153,6 +163,7 @@ class _LoveGeneratorPageState extends State<LoveGeneratorPage> {
       return LoveButton(
         text: "Tap!",
         onPressed: () {
+          Analytics.analytics.logEvent(name: "randomize_luck");
           context.read<PixelateBloc>().add(
                 RandomizePixelate(
                   pixelate: pixelateBloc.state.props[0],
@@ -165,6 +176,7 @@ class _LoveGeneratorPageState extends State<LoveGeneratorPage> {
       return LoveButton(
         text: "Retry",
         onPressed: () {
+          Analytics.analytics.logEvent(name: "retry");
           context.read<PixelateBloc>().add(
                 BackToInitial(),
               );

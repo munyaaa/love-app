@@ -21,6 +21,24 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+  
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyB6dYj0ri4kkYHG0UER8TDdnr48gE0D-XA",
+      authDomain: "xipel-d663d.firebaseapp.com",
+      projectId: "xipel-d663d",
+      storageBucket: "xipel-d663d.appspot.com",
+      messagingSenderId: "615040343853",
+      appId: "1:615040343853:web:db9afbecc30496aa733da4",
+      measurementId: "G-BK03WKXBDE"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
