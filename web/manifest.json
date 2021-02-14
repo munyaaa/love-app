@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
     "name": "xipel",
     "short_name": "xipel",
-=======
-    "name": "love_app",
-    "short_name": "love_app",
->>>>>>> d9c982730f4b1cc2d9cac68a6efe4963269b5d8c
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
