@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.xipel">
+=======
+    package="com.example.love_app">
+>>>>>>> d9c982730f4b1cc2d9cac68a6efe4963269b5d8c
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
