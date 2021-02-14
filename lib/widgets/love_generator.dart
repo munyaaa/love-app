@@ -55,11 +55,11 @@ class _LoveGeneratorState extends State<LoveGenerator> {
 
   Color _generateColor(int pixelate) {
     if (pixelate == -1) {
-      return Colors.pink.shade400;
+      return Color(0xffff8195);
     } else if (pixelate == -2) {
-      return Colors.grey.shade200;
+      return Color(0xffeff2f8);
     } else {
-      return HSLColor.fromAHSL(1, pixelate.toDouble(), 0.7, 0.8).toColor();
+      return HSLColor.fromAHSL(1, pixelate.toDouble(), 1, 0.75).toColor();
     }
   }
 
